@@ -27,12 +27,17 @@
         $pyd_encode_account  = urlencode( $account );
         $pyd_encode_timezone = urlencode( $timezone );
 
+        ob_start();
         ?>
 
     <div class="PYDgoogleCal">
         <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;height=<?php echo $height; ?>&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=<?php echo $pyd_encode_account; ?>&amp;color=%232952A3&amp;ctz=<?php echo $pyd_encode_timezone; ?>" style=" border-width:0 " width="<?php echo $width; ?>" height="<?php echo $height; ?>" frameborder="0" scrolling="no"></iframe>
-        </div>
+    </div>
     <?php
+        $output_string = ob_get_contents();
+        ob_end_clean();
+        return $output_string;
+
     }
 
     add_shortcode( 'pydgooglecal', 'pyd_maps_shortcode' );
