@@ -3,7 +3,7 @@ Contributors: mgyura
 Tags: Google Calendar, Calendar, shortcode
 Requires at least: 3.2
 Tested up to: 3.4
-Stable tag: 1.00
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,6 +20,9 @@ Creates a shortcode for dropping in a Google Calendar. The plugin uses your Word
 3. Use Shortcode [pydgooglecal account="YOUR_CAL@ACCOUNT.COM" width="800" height="600"] on any page or post you want to display the calendar
 
 == Changelog ==
+
+= 1.1 =
+*Added ob_start to allow for proper placement on page
 
 = 1.01 =
 * Initial release
